@@ -3,13 +3,15 @@
 
 using namespace std;
 
-arrayCont * AC;
+arrayCont<int> * AC;
 
 int main()
 {
-	AC = new arrayCont(10);
+
+	AC = new arrayCont<int>(10);
+
 	for (int i = 0; i < AC->getn(); i++)
-		AC->SetElement(i,i);
+		AC->SetElement(i, i);
 
 	AC->printArray();
 
@@ -17,7 +19,7 @@ int main()
 
 	AC->makeArray(10);
 	for (int i = 0; i < AC->getn(); i++)
-		AC->SetElement(i, i+10);
+		AC->SetElement(i, i + 10);
 
 	AC->printArray();
 
@@ -48,5 +50,6 @@ int main()
 	AC->sort();
 	cout << "\nSorted:\n";
 	AC->printArray();
+
 	system("pause");
 }
